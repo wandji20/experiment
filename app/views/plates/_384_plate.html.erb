@@ -1,0 +1,8 @@
+<h3>Plate No: <%= index + 1%></h3>
+<div class="grid-container" style="display: grid; grid-template-columns: repeat(24, 100px);" >
+  <% 16.times do |row| %>
+    <% 24.times do |col| %>
+      <div class="grid-item" style="background: <%= well_color(plate[row][col]) %> " > <%= well_text(plate[row][col]) %></div>
+    <% end %>
+  <% end %>
+</div>

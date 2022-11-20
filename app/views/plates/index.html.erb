@@ -1,0 +1,31 @@
+<div style="display: block; width: 100%; padding: 10px">
+  <%= form_with url: "/plates", method: :post do |form| %>
+    <div style="display: block; width: 100%; padding: 10px">
+      <%= form.label :plate_size, "Plate size" %>
+      <%= form.text_field :plate_size %>
+    </div>
+    <div style="display: block; width: 100%; padding: 10px">
+      <%= form.label :samples, "Samples", style: "display: block;" %>
+      <%= form.text_area :samples, size: "100x5" %>
+    </div>
+    <div style="display: block; width: 100%; padding: 10px">
+      <%= form.label :reagents, "Reagents", style: "display: block;" %>
+      <%= form.text_area :reagents, size: "100x5" %>
+    </div>
+    <div style="display: block; width: 100%; padding: 10px">
+      <%= form.label :repeats, "repeats", style: "display: block;" %>
+      <%= form.text_area :repeats, size: "70x3" %>
+    </div>
+     <div style="display: block; width: 100%; padding: 10px">
+      <%= form.submit "Preview Plates" %>
+    </div>
+  <% end %>
+</div>
+
+<turbo-frame id="plates">
+  <% if @plates %>
+    <%= render 'plates', plates:  @plates, plate_size: @plate_size %>
+  <% else %>
+    <%= render 'shared/empty' %>
+  <% end %>
+</turbo-frame>

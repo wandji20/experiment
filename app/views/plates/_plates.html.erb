@@ -1,0 +1,5 @@
+<div>
+  <% plates.each_with_index do |plate, index| %>
+    <%= render plate_template_partial_path(plate_size), plate: plate, index: index %>
+  <% end %>
+</div>

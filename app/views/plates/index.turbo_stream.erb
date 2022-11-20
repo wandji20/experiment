@@ -1,0 +1,6 @@
+<% if @plates %>
+  <%#= render 'plates', plates:  @plates, plate_size: @plate_size %>
+  <%= turbo_stream.update 'plates', partial: 'plates', locals: { plates:  @plates, plate_size: @plate_size } %>
+<% else %>
+  <%= render 'shared/empty' %>
+<% end %>
