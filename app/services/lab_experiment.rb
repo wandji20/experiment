@@ -93,3 +93,16 @@ class LabExperiment
   end
 end
 
+# # Sample method def and call to see plates
+
+# def display_samples(size, samples,reagents, repeats)
+#   LabExperiment.new(size, samples,reagents, repeats).display_plates
+# end
+
+# size = 96
+# samples =  [['Sample-1', 'Sample-2', 'Sample-3'], ['Sample-1', 'Sample-2', 'Sample-3']]
+# reagents =  [['Pink'], ['Green']]
+# repeats = [3, 2]
+
+# display_samples(size, samples,reagents, repeats)
+
